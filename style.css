@@ -140,7 +140,8 @@ section {
 
 .products,
 .about,
-.review {
+.review,
+.experience {
   background-color: rgba(114, 222, 206, .55);
   border-radius: 2%;
   color: #827466;
@@ -322,6 +323,10 @@ section {
 
 .review h2 {
   padding-top: 1.5rem;
+}
+
+.experience {
+
 }
 
 footer {
