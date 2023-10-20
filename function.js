@@ -25,3 +25,31 @@ function scrollActive(){
   })
 }
 window.addEventListener('scroll', scrollActive)
+
+/*==================== SHOW MENU ====================*/
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
+
+/*===== MENU SHOW =====*/
+if(navToggle){
+    navToggle.addEventListener('click', () =>{
+        navMenu.classList.add('show-menu')
+    })
+}
+
+/*===== MENU HIDDEN =====*/
+if(navClose){
+    navClose.addEventListener('click', () =>{
+        navMenu.classList.remove('show-menu')
+    })
+}
+
+/* ======= PRODUCT SPEC TO ZOOM ======= */
+const enlarge = document.getElementById("product-spec")
+
+if(enlarge){
+  enlarge.addEventListener('click', () =>{
+
+  })
+}

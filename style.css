@@ -2,7 +2,7 @@ body {
   /* background-image: url(https://i.pinimg.com/1200x/6f/38/87/6f3887eaba7428f1a0a5d1a01d525a24.jpg);
   background-repeat: no-repeat;
   background-size: cover; */
-  background-color: #F2EADF;
+  background-color: #e8dcd1; /* #F2EADF; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -25,7 +25,7 @@ i:hover {
   top: 0;
   left: 0;
   z-index: 3;
-  height: 1.8rem;
+  height: 2rem;
 }
 
 .header i,
@@ -51,6 +51,11 @@ i:hover {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px); /* for safari */
   transition: top .4s;
+}
+
+.nav__toggle,
+.insta {
+  padding-top: .25rem;
 }
 
 section {
@@ -98,6 +103,7 @@ section {
 .main h1 {
   font-style: italic;
   font-weight: lighter;
+  color: #7ec4bc;
 }
 
 .main img {
@@ -142,17 +148,16 @@ section {
 .about,
 .review,
 .experience {
-  background-color: rgba(114, 222, 206, .55);
-  border-radius: 2%;
+  background-color: rgb(126, 196, 188); /* rgba(114, 222, 206, .55); */
+  border-radius: 10px;
   color: #827466;
   text-align: center;
-  margin: auto 1rem;
+  margin: auto .5rem;
 }
 
-.about img,
-.products img {
+.product_img img {
+  border-radius: 25px;
   max-width: 300px;
-  border-radius: 1%;
 }
 
 .about a {
@@ -180,14 +185,40 @@ section {
   margin-bottom: 1rem;
 }
 
-.about_img {
-  margin: 2rem;
+.mark_img {
+  padding: 3rem;
 }
 
-@media screen and (min-width: 600px) {
+.product_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.product_img img {
+  padding-bottom: 1em;
+}
+
+.mark_img img {
+  max-width: 250px;
+  border-radius: 25px;
+}
+
+.mark h4 {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  letter-spacing: .05rem;
+  color: white;
+  text-align: left;
+}
+
+@media screen and (min-width: 900px) {
   .about,
   .products,
-  .review {
+  .review,
+  .experience {
     margin-left: 10rem;
     margin-right: 10rem;
     margin-bottom: 5rem;
@@ -195,7 +226,28 @@ section {
   .splash img {
     margin-top: 3rem;
   }
+  .intro,
+  .container {
+    padding: 3rem;
+  }
+  .product_img {
+    flex-direction: row;
+  }
+  .compare img {
+    max-width: 200px; /* NOT WORKING */
+  }
 }
+
+/* @media screen and (min-width 900px) {
+  .mark_img {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .mark h4 {
+    max-width: 650px;
+    margin-left: 2rem;
+  }
+} */
 
 .product_info {
   padding: .5rem;
@@ -210,17 +262,16 @@ section {
   color: #827466;
 }
 
+.products p {
+  color: white;
+}
+
 .products a:hover {
   color: white;
 }
 
-.products {
-  padding: 1rem;
-}
-
 .order {
   text-align: center;
-  padding-bottom: 1rem;
   margin-top: 1rem;
 }
 
@@ -235,6 +286,8 @@ section {
   padding: .5rem;
   border: solid .08rem #827466;
   border-radius: 10%;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .order button:hover {
@@ -245,7 +298,8 @@ section {
 
 .order h4 {
   font-weight: lighter;
-  margin: 1rem;
+  margin: 2rem;
+  color: white;
 }
 
 .products details:hover {
@@ -255,16 +309,16 @@ section {
 
 .products h2 {
   font-size: 2rem;
+  padding-top: 3rem;
 }
 
 .intro h4 {
   margin: 1rem;
-  padding: 1rem;
+
   font-weight: lighter;
   font-size: 1.1rem;
   line-height: 1.8rem;
   letter-spacing: .05rem;
-  background-color: rgba(7, 71, 92, 0.3);
   color: white;
   border-radius: 10px;
 }
@@ -273,8 +327,11 @@ section {
   padding-bottom: 1rem;
 }
 
+.compare img {
+  margin-bottom: 2rem;
+}
+
 .flex {
-  margin: 2rem;
   color: white;
 }
 
@@ -284,15 +341,16 @@ section {
 }
 
 .flex details {
-  display: inline-flex;
-  margin: .5rem;
-  background-color: rgba(7, 71, 92, 0.3);
-  border-radius: 1rem;
-  padding: .8rem;
+  flex-wrap: wrap; /* check if works */
+  margin-bottom: 3rem;
+
 }
 
 .flex img {
   width: 325px;
+  border: solid 1.5px #827466;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .review {
@@ -317,16 +375,16 @@ section {
 .reviews {
   background-color: rgba(7, 71, 92, 0.3);
   padding: 1.2rem;
-  border-radius: 5%;
+  border-radius: 10px;
   margin: 2rem;
 }
 
 .review h2 {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
 }
 
-.experience {
-
+.experience h2 {
+  padding-top: 2.5rem;
 }
 
 footer {
@@ -338,9 +396,7 @@ footer {
 .contact i,
 .contact a {
   color: black;
-  padding: .3rem;
-  border-radius: 20%;
-  margin-left: .2rem;
+  padding: .1rem;
 }
 
 .contact i {
@@ -353,6 +409,8 @@ footer {
 
 footer h6 {
   margin-right: 1rem;
+  letter-spacing: .01rem;
+  line-height: 1rem;
 }
 
 
