@@ -156,7 +156,7 @@ section {
 }
 
 .product_img img {
-  border-radius: 25px;
+  border-radius: 1em;
   max-width: 300px;
 }
 
@@ -197,12 +197,12 @@ section {
 }
 
 .product_img img {
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .mark_img img {
   max-width: 250px;
-  border-radius: 25px;
+  border-radius: 1em;
 }
 
 .mark h4 {
